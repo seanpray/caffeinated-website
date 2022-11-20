@@ -102,8 +102,8 @@ header {
 }
 
 .corner {
-    width: 5em;
-    height: 5em;
+    width: 10em;
+    height: 10em;
 }
 
 .corner a {
@@ -112,12 +112,17 @@ header {
     justify-content: center;
     width: 100%;
     height: 100%;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
 }
 
 .corner img {
-    width: 5em;
-    height: 5em;
+    width: 8em;
+    height: 8em;
     object-fit: contain;
+    background: rgba(103, 71, 53, 0.9);
+    border-radius: 4em;
+    margin: 0.2rem;
 }
 
 nav {
@@ -127,8 +132,8 @@ nav {
 }
 
 svg {
-    width: 2em;
-    height: 3em;
+    width: 2.6667em;
+    height: 4em;
     display: block;
 }
 
@@ -140,7 +145,7 @@ ul {
     position: relative;
     padding: 0;
     margin: 0;
-    height: 3em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +178,9 @@ nav a {
     padding: 0 0.5rem;
     color: var(--color-text);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;

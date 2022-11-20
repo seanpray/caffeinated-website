@@ -2,14 +2,36 @@
 	import { page } from '$app/stores';
     import logo from "$lib/images/logo.png";
 	import github from '$lib/images/github.svg';
+    import { browser } from '$app/environment';
+    let mobile = false;
+    const MOBILE_WIDTH = 1400;
+    const handleResize = (e) => {
+		mobile = window.innerWidth < MOBILE_WIDTH;
+	};
+
+	if (browser) {
+		handleResize();
+		const debounce = (fn, interval) => {
+			let timer;
+			return function debounced(...args) {
+				clearTimeout(timer);
+				timer = setTimeout(function call() {
+					fn(...args);
+				}, interval);
+			};
+		};
+		window.addEventListener('resize', debounce(handleResize, 50));
+	}
 </script>
 
 <header class="bg-[#f4eae1]">
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="logo" />
-		</a>
-	</div>
+        <div class="corner">
+            {#if !mobile}
+                <a href="https://kit.svelte.dev">
+                    <img src={logo} alt="logo" />
+                </a>
+            {/if}
+        </div>
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -19,13 +41,13 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/robot' ? 'page' : undefined}>
 				<a href="/robot">Robot</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}>
 				<a href="/blog">Blog</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.startsWith('/sponsors') ? 'page' : undefined}>
 				<a href="/sponsors">Sponsors</a>
 			</li>
 		</ul>
@@ -34,11 +56,13 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
+    <div class="corner">
+        {#if !mobile}
+            <a href="https://github.com/sveltejs/kit">
+                <img src={github} alt="GitHub" />
+            </a>
+        {/if}
+    </div>
 </header>
 
 <style>
