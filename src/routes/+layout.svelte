@@ -1,6 +1,24 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
 	import './styles.scss';
+	import { onMount } from 'svelte';
+    import { type AuthData, loggedin } from "../store.ts";
+	import ls from 'localstorage-slim';
+
+	onMount(() => {
+		if (ls.get('auth', { decrypt: true })) {
+            try {
+                
+            } catch {
+                console.log("parse fail")
+                clear_login();
+            }
+		} else {
+			console.log('not auth');
+            console.log('auth');
+		}
+		// get logged in
+	});
 </script>
 
 <div class="bg-[#553936] min-h-screen h-[200vh]">

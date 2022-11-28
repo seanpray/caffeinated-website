@@ -4,11 +4,10 @@
 	import github from '$lib/images/github.svg';
     import { browser } from '$app/environment';
     let mobile = false;
-    const MOBILE_WIDTH = 1400;
+    const MOBILE_WIDTH = 800;
     const handleResize = (e) => {
 		mobile = window.innerWidth < MOBILE_WIDTH;
 	};
-
 	if (browser) {
 		handleResize();
 		const debounce = (fn, interval) => {
@@ -20,7 +19,7 @@
 				}, interval);
 			};
 		};
-		window.addEventListener('resize', debounce(handleResize, 50));
+		window.addEventListener('resize', debounce(handleResize, 2));
 	}
 </script>
 
@@ -50,6 +49,9 @@
 			<li aria-current={$page.url.pathname.startsWith('/sponsors') ? 'page' : undefined}>
 				<a href="/sponsors">Sponsors</a>
 			</li>
+			<li aria-current={$page.url.pathname.startsWith('/member') ? 'page' : undefined}>
+				<a href="/member">Members</a>
+			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -58,7 +60,7 @@
 
     <div class="corner">
         {#if !mobile}
-            <a href="https://github.com/sveltejs/kit">
+            <a href="https://github.com/notseanray/caffeinated-website">
                 <img src={github} alt="GitHub" />
             </a>
         {/if}

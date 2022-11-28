@@ -1,5 +1,6 @@
 <script lang="ts">
     import rapid_react from "$lib/images/rapidreact.png";
+    import Stl from "../../STL.svelte";
 </script>
 
 <svelte:head>
@@ -15,29 +16,7 @@
             </div>
         </div>
         <div class="flex justify-center text-center mt-4">
-            <div class="flex flex-wrap justify-center text-center content-center">
-                <div class="text-2xl m-2 max-w-4xl content-center">
-                    The robot was shit
-                        The robot was shit
-                            The robot was shit
-                                The robot was shit
-                                    The robot was shit
-                                        The robot was shit
-                                            The robot was shit
-                                                The robot was shit
-                                                    The robot was shit
-                                                        The robot was shit
-                                                            The robot was shit
-                                                                The robot was shit
-                                                                    The robot was shit
-                                                                        The robot was shit
-                                                                            The robot was shit
-                                                                                The robot was shit
-                                                                                    The robot was shit
-                                                                                        The robot was shit
-                </div>
-                <img class="h-80 m-2 rounded-md" src={rapid_react} alt="" />
-            </div>
+            <Stl />
         </div>
         <div class="flex justify-center text-center">
             <div class="flex flex-wrap justify-center text-center content-center">
