@@ -1,5 +1,6 @@
 <script lang="ts">
-    import rapid_react from "$lib/images/rapidreact.png";
+    import logo from "$lib/images/logo.png";
+    import Post from "../../BlogPost.svelte";
 </script>
 
 <svelte:head>
@@ -7,47 +8,47 @@
 	<meta name="Caffeinated Robotics" content="Blog page" />
 </svelte:head>
 
-<section>
-    <div class="bg-[#674736] rounded-3xl m-2 p-4 border-2 border-[#F2D6BE]">
-        <div class="flex justify-center text-center">
-            <div class="text-5xl">
-                Blog
-            </div>
+<img class="absolute h-48" src={logo} alt="" />
+<section class="flex mx-[5%] mt-20">
+    <div class="bg-[#bc8f62] mt-28 text-white w-2/12 h-[70vh] text-5xl font-extrabold">
+        <div class="flex justify-center text-center mt-10">
+            2022
+            <br />
+            12 6
+            <br />
+            Tuesday
         </div>
-        <div class="flex justify-center text-center mt-4">
-            <div class="flex flex-wrap justify-center text-center content-center">
-                <div class="text-2xl m-2 max-w-4xl content-center">
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                we blogging
-                </div>
-                <img class="h-80 m-2 rounded-md" src={rapid_react} alt="" />
+    </div>
+    <div>
+        <Post title={"title temp"} date={"unix timestamp goes here for date"} text={"hello"} />
+    </div>
+    <div class="absolute right-20 bg-[#4c2700] w-2/12 text-[#bc8f62] h-[85vh]">
+        <div class="ml-10 mt-4">
+            <div class="text-6xl font-extrabold">
+                blog posts
             </div>
-        </div>
-        <div class="flex justify-center text-center">
-            <div class="flex flex-wrap justify-center text-center content-center">
-                <img class="h-80 m-2 rounded-md" src={rapid_react} alt="" />
-                <div class="text-2xl m-2 max-w-4xl content-center">
-                    Rapid React is the game for the 2022 FIRST Robotics Competition. The game is themed around transportation and involves two alliances consisting of three teams each competing to perform various tasks, including shooting balls known as Cargo into high and low hubs, and hanging on a series of rungs at the end of the match.
-                </div>
+            <div class="text-3xl font-extrabold">
+                Hello World!
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
+                <br />
+                blog posts
             </div>
         </div>
     </div>

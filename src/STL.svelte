@@ -91,7 +91,7 @@
 		//
 		// 	scene.add(mesh);
 		// });
-		//
+
 		// loader.load("/stl/wago.stl", function (geometry) {
 		// 	const mesh = new THREE.Mesh(geometry, material);
 		//

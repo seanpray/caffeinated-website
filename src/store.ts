@@ -14,4 +14,6 @@ const clear_login = () => {
 
 };
 
-export { type AuthData, loggedin, store_login, clear_login };
+const ismobile = writable(false);
+
+export { type AuthData, loggedin, store_login, clear_login, ismobile };
