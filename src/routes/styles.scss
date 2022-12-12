@@ -122,6 +122,7 @@ header {
 
 nav {
 	display: flex;
+    position: sticky;
 	justify-content: center;
 }
 
@@ -166,24 +167,17 @@ li[aria-current='page']::before {
 }
 
 nav a {
-    margin-top: 1.2rem;
+    margin-top: 0.4rem;
 	display: flex;
 	height: 100%;
 	align-items: center;
 	padding: 0 0.8rem;
 	font-weight: 800;
-	font-size: 3rem;
-	margin-left: 0.4rem;
-	margin-right: 0.4rem;
+	margin-left: 0.1vw;
+	margin-right: 0.1vw;
 	letter-spacing: 0.05em;
 	text-decoration: none;
 	transition: color 0.2s linear;
-}
-
-@media (max-width: 600px) {
-    nav a {
-        font-size: 1.2rem;
-    }
 }
 
 a:hover {

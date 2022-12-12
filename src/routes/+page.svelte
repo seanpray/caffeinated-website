@@ -3,13 +3,13 @@
 	import first_logo from '$lib/images/first.png';
 	import Profile from './Profile.svelte';
 
-    import ian_oberbeck from "$lib/headshots/ian_oberbeck.jpeg";
-    import jacob_dymkowski from "$lib/headshots/jacob_dymkowski.jpeg";
-    import leona_longhurst from "$lib/headshots/leona_longhurst.jpeg";
-    import sameeh_pottayil from "$lib/headshots/sameeh_pottayil.jpeg";
-    import sean_ray from "$lib/headshots/sean_ray.jpeg";
-    import steve_baratian from "$lib/headshots/steve_baratian.jpeg";
-    import zach_cloud from "$lib/headshots/zach_cloud.jpeg";
+	import ian_oberbeck from '$lib/headshots/ian_oberbeck.jpeg';
+	import jacob_dymkowski from '$lib/headshots/jacob_dymkowski.jpeg';
+	import leona_longhurst from '$lib/headshots/leona_longhurst.jpeg';
+	import sameeh_pottayil from '$lib/headshots/sameeh_pottayil.jpeg';
+	import sean_ray from '$lib/headshots/sean_ray.jpeg';
+	import steve_baratian from '$lib/headshots/steve_baratian.jpeg';
+	import zach_cloud from '$lib/headshots/zach_cloud.jpeg';
 
 	import { getContext } from 'svelte';
 	import { browser } from '$app/environment';
@@ -53,7 +53,7 @@
 		</div>
 		<div>
 			<div class="mobile-steam">
-				<div class="grid grid-cols-3 gap-0.5 w-[13rem]">
+				<div class="grid grid-cols-3 w-[13rem] translate-y-12">
 					<div>
 						<div class="dot" />
 						<div class="dot delay1" />
@@ -62,18 +62,20 @@
 						<div class="dot delay4" />
 						<div class="dot delay5" />
 					</div>
-					<div class="mt-[6rem]">
+					<div class="steam-grid-translate1">
 						<div class="dot delay2" />
 						<div class="dot delay3" />
 						<div class="dot delay4" />
 						<div class="dot delay5" />
 					</div>
-					<div class="mt-[15rem]">
+					<div class="steam-grid-translate2">
 						<div class="dot delay5" />
 					</div>
 				</div>
 			</div>
-			<img class="mobile-logo m-2" src={logo} alt="" />
+            <div class="flex justify-center text-center">
+                <img class="mobile-logo m-1" src={logo} alt="" />
+            </div>
 		</div>
 		<div class="mobile-title">
 			<div class="mobile-name font-extrabold">caffeinated</div>
@@ -88,9 +90,9 @@
 			<div>
 				<div class="mobile-name uppercase font-extrabold flex ml-1">
 					first
-                    {#if !mobile}
-                        <img class="ml-16 h-48 m-2 rounded-md" src={first_logo} alt="" />
-                    {/if}
+					{#if !mobile}
+						<img class="ml-16 h-48 m-2 rounded-md" src={first_logo} alt="" />
+					{/if}
 				</div>
 				<div class="flex -translate-y-8">
 					<div class="dot3" />
@@ -103,7 +105,7 @@
 					<div class="dot3" />
 				</div>
 				<div>
-					<div class="text-4xl m-2 max-w-4xl content-center font-bold text-left mt-8">
+					<div class="text-boxes m-2 max-w-4xl content-center font-bold text-left mt-8">
 						In 1989, Dean Kamen started the nonprofit organization FIRST, which stands for "For the
 						Inspiration and Recognition of Science and Technology". The FIRST Robotics Competition
 						is a high-school robotics competition that combines gracious professionalism with
@@ -118,37 +120,39 @@
 
 		<div class="flex justify-center text-center mt-4">
 			<div class="flex flex-wrap justify-center text-center content-center">
-				<div class="text-3xl m-2 max-w-4xl content-center font-bold text-right">
+				<div class="text-boxes m-2 max-w-4xl content-center font-bold text-right">
 					"FIRST creates programs where its participants are limited only by the bounds of their
 					imagination and gives them a forum to begin to examine the world’s problems by exploring
 					science, technology, engineering and math.
 					<br />
 					- Congressman Jim Langevin (RI)
-                    {#if !mobile}
-                        <iframe
-                            class="ml-6 rounded-md float-right mt-10"
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/oVhzG42vOoY"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        />
-                    {:else}
-                        <iframe
-                            class="ml-6 rounded-md float-right mt-10"
-                            width="267"
-                            height="150"
-                            src="https://www.youtube.com/embed/oVhzG42vOoY"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        />
-                    {/if}
+					{#if !mobile}
+						<iframe
+							class="ml-6 rounded-md float-right mt-10"
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/oVhzG42vOoY"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					{:else}
+                        <div class="flex flex-center justify-center">
+                            <iframe
+                                class="ml-6 rounded-md float-right mt-10"
+                                width="250"
+                                height="141"
+                                src="https://www.youtube.com/embed/oVhzG42vOoY"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            />
+                        </div>
+					{/if}
 					<br />
-					<div class="flex w-[20rem] float-right">
+					<div class="flex first-dots-ending float-right">
 						<div class="dot3" />
 						<div class="dot3" />
 						<div class="dot3" />
@@ -162,13 +166,13 @@
 			</div>
 		</div>
 	</div>
-    <div class="mt-80" />
+	<div class="mt-80" />
 	<div class="flex flex-wrap">
 		<div class="flex justify-center text-center">
 			<div>
 				<div class="mobile-name font-extrabold flex ml-1">the team</div>
 				<div>
-					<div class="text-4xl m-2 max-w-[110rem] content-center font-bold text-left mt-8">
+					<div class="text-boxes m-2 max-w-[110rem] content-center font-bold text-left mt-8">
 						Caffeinated is a community-based FIRST Robotics Competition team in Marietta, GA. The
 						team was founded on November, 2022 with the mission of not only to be a competitive FRC
 						team, but also to provide a productive, engaging environment for high schoolers in the
@@ -178,35 +182,37 @@
 						allows us a deeper takeaway than simply being given the solution.
 					</div>
 				</div>
-                <div class="flex -translate-x-16 mt-8">
-                    <div class="bottom-0 left-0 translate-y-24">
-                        <div class="dot2" />
-                        <div class="dot2" />
-                        <div class="dot2" />
-                        <div class="dot2" />
+				<div class="flex mt-8">
+                    {#if !mobile}
+                        <div class="bottom-0 left-4 translate-y-24">
+                            <div class="dot2" />
+                            <div class="dot2" />
+                            <div class="dot2" />
+                            <div class="dot2" />
+                        </div>
+                    {/if}
+                    <div class="flex flex-wrap max-w-full team-profile">
+                        <img class="mx-4 my-4 h-64" src={ian_oberbeck} alt="" />
+                        <img class="mx-4 my-4 h-64" src={jacob_dymkowski} alt="" />
+                        <img class="mx-4 my-4 h-64" src={leona_longhurst} alt="" />
+                        <img class="mx-4 my-4 h-64" src={sameeh_pottayil} alt="" />
+                        <img class="mx-4 my-4 h-64" src={sean_ray} alt="" />
                     </div>
-                    <div class="flex flex-wrap max-w-full">
-                        <img class="mx-4 h-64" src={ian_oberbeck} alt="" />
-                        <img class="mx-4 h-64" src={jacob_dymkowski} alt="" />
-                        <img class="mx-4 h-64" src={leona_longhurst} alt="" />
-                        <img class="mx-4 h-64" src={sameeh_pottayil} alt="" />
-                        <img class="mx-4 h-64" src={sean_ray} alt="" />
-                    </div>
-                </div>
+				</div>
 			</div>
 		</div>
-            {#if !mobile}
-                <div class="bottom-0 right-0">
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                    <div class="dot2" />
-                </div>
-            {/if}
+		{#if !mobile}
+			<div class="bottom-0 right-5">
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+				<div class="dot2" />
+			</div>
+		{/if}
 	</div>
 </section>
 
@@ -264,14 +270,62 @@
 	.mobile-steam {
 		margin-left: 10rem;
 	}
+    .first-dots-ending {
+        width: 20rem;
+    }
+	.dot {
+		animation-name: wave;
+		animation-iteration-count: infinite;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		height: 1rem;
+		width: 1rem;
+		border: 1px solid #ffe9d3;
+		background: #ffe9d3;
+		z-index: 2;
+		border-radius: 50%;
+		margin: 1.7rem;
+	}
+    .steam-grid-translate1 {
+        margin-top: 5.5rem;
+    }
+    .steam-grid-translate2 {
+        margin-top: 13.6rem;
+    }
+    .team-profile {}
+    .text-boxes {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
 	@media (max-width: 1000px) {
+        .text-boxes {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        .steam-grid-translate1 {
+            margin-top: 20.1vw;
+        }
+        .steam-grid-translate2 {
+            margin-top: 50.1vw;
+        }
+        .team-profile {
+            display: flex;
+            justify-content: center;
+        }
+        .first-dots-ending {
+            width: 90vw;
+        }
+		.mobile-logo {
+			height: 90vw;
+			width: 90vw;
+		}
+		.mobile-steam {
+			margin-left: 20vw;
+            margin-top: 5vh;
+		}
 		.mobile-title {
 			margin-top: 0;
 			margin-left: 2.5rem;
-		}
-		.mobile-logo {
-			height: 25rem;
-			width: 25rem;
 		}
 		.mobile-name {
 			font-size: 17vw;
@@ -279,43 +333,40 @@
 		.mobile-spacing {
 			margin-top: 1rem;
 		}
-		.mobile-steam {
-			margin-left: 6rem;
-		}
+        .dot {
+            animation-name: wave;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            height: 2vw;
+            width: 2vw;
+            border: 1px solid #ffe9d3;
+            background: #ffe9d3;
+            z-index: 2;
+            border-radius: 50%;
+            margin: 8vw;
+        }
 	}
 	.dotcontainer {
 		align-items: bottom;
 		align-self: bottom;
 		bottom: 0;
 	}
-	.dot {
-		animation-name: wave;
-		animation-iteration-count: infinite;
-		animation-duration: 5s;
-		animation-timing-function: linear;
-		height: 1.3rem;
-		width: 1.3rem;
-		border: 1px solid #ffe9d3;
-		background: #ffe9d3;
-		z-index: 100;
-		border-radius: 50%;
-		margin: 1.7rem;
-	}
 	.dot2 {
-		height: 1.3rem;
-		width: 1.3rem;
+		height: 1rem;
+		width: 1rem;
 		border: 1px solid #bc8f62;
 		background: #bc8f62;
-		z-index: 100;
+		z-index: 2;
 		border-radius: 50%;
 		margin: 1.7rem;
 	}
 	.dot3 {
-		height: 1.3rem;
-		width: 1.3rem;
+		height: 1rem;
+		width: 1rem;
 		border: 1px solid #bc8f62;
 		background: #bc8f62;
-		z-index: 100;
+		z-index: 2;
 		border-radius: 50%;
 		margin: 0.6rem;
 	}
