@@ -11,7 +11,7 @@
     import mail from "$lib/icons/mail.png";
 
     let mobile = false;
-    const MOBILE_WIDTH = 1000;
+    const MOBILE_WIDTH = 1200;
     const handleResize = (e) => {
 		mobile = window.innerWidth < MOBILE_WIDTH;
         ismobile.set(mobile);
