@@ -21,9 +21,11 @@
             <img class="h-96 p-8" src={champ} alt="" />
         </div>
     </div>
-	<div class="flex justify-center text-center m-20">
+	<div class="flex flex-wrap justify-center text-center m-20">
 		<div class="text-2xl font-extrabold flex ml-1">
 			Looking to support us? You can contact us at
+		</div>
+		<div class="text-2xl font-extrabold flex ml-1">
 			<a
 				class="pl-1.5 rounded-md hover:opacity-90 duration-300"
 				href="mailto:caffeinated9293@gmail.com"
@@ -32,7 +34,9 @@
 			>
 				caffeinated9293@gmail.com
 			</a>
-			.
+		</div>
+		<div class="text-2xl font-extrabold flex">
+        .
 		</div>
 	</div>
 </section>
