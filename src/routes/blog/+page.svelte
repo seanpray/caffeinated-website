@@ -2,7 +2,7 @@
 	import { ismobile } from '../../store.ts';
 	import logo from '$lib/images/logo.png';
 	import Post from '../../BlogPost.svelte';
-    import { loadPostMeta } from "./+page.ts";
+    import { _loadPostMeta } from "./+page.ts";
 	// Plan for blog image:
 	// schema for post
 	const post = [
