@@ -12,7 +12,7 @@
 	});
 	onMount(async () => {
     console.log(import.meta.env.VITE_BACKEND_URL)
-		let req = await fetch(import.meta.env.VITE_BACKEND_URL);
+		let req = await fetch(import.meta.env.VITE_BACKEND_URL + "/posts");
 		if (req.ok) {
 			posts = await req.json();
 		}
