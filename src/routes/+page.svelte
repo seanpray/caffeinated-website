@@ -53,7 +53,7 @@
 		</div>
 		<div>
 			<div class="mobile-steam">
-				<div class="grid grid-cols-3 w-[13rem] translate-y-12">
+				<div class="grid grid-cols-3 w-[13rem] -translate-y-16">
 					<div>
 						<div class="dot" />
 						<div class="dot delay1" />
@@ -73,11 +73,11 @@
 					</div>
 				</div>
 			</div>
-            <div class="flex justify-center text-center">
+            <div class="flex justify-center text-center -translate-y-28">
                 <img class="mobile-logo m-1" src={logo} alt="" />
             </div>
 		</div>
-		<div class="mobile-title">
+		<div class="mobile-title -translate-y-44">
 			<div class="mobile-name font-extrabold">caffeinated</div>
 			<br />
 			<div class="team-number text-4xl font-bold ml-1">FRC 9293</div>

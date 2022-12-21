@@ -1,1 +1,1 @@
-async fn new_user(data: Json<)
+// async fn new_user(data: Json)

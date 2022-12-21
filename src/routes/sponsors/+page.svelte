@@ -2,6 +2,7 @@
 	import rapid_react from '$lib/images/rapidreact.png';
     import start_proto from '$lib/sponsors/startproto.svg';
     import champ from '$lib/sponsors/champ.svg';
+    import randisoniker from '$lib/sponsors/randisoniker.png';
 </script>
 
 <svelte:head>
@@ -15,10 +16,11 @@
 			Many thanks to our sponsors for their generous support!
 		</div>
 	</div>
-	<div class="flex justify-center text-center m-20">
-        <div class="flex flex-wrap text-center m-20 mx-[15%]">
-            <img class="h-96 p-8 bg-white rounded-lg" src={start_proto} alt="" />
-            <img class="h-96 p-8" src={champ} alt="" />
+	<div class="flex justify-center m-20">
+        <div class="flex flex-wrap justify-center m-20 mx-[15%]">
+            <img class="h-64 m-8 p-2 bg-white rounded-lg" src={start_proto} alt="" />
+            <img class="h-96 m-8 p-2" src={champ} alt="" />
+            <img class="h-96 m-8 p-.5" src={randisoniker} alt="" />
         </div>
     </div>
 	<div class="flex flex-wrap justify-center text-center m-20">

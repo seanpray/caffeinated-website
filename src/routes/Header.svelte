@@ -4,7 +4,7 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-    <header class="flex justify-center text-center lowercase opacity-100">
+    <header class="flex justify-center text-center lowercase opacity-100 mb-10 pb-10">
         <div class="fixed rounded-md z-50 pb-4">
             <nav class="bg-[#2d1902] rounded-sm bg-opacity-50 w-[100vw] pb-5">
                 <ul>
