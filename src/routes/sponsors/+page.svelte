@@ -1,7 +1,7 @@
 <script lang="ts">
 	import rapid_react from '$lib/images/rapidreact.png';
     import start_proto from '$lib/sponsors/startproto.svg';
-    import champ from '$lib/sponsors/champ.svg';
+    import champ from '$lib/sponsors/champ.png';
     import randisoniker from '$lib/sponsors/randisoniker.png';
 </script>
 
@@ -18,9 +18,15 @@
 	</div>
 	<div class="flex justify-center m-20">
         <div class="flex flex-wrap justify-center m-20 mx-[15%]">
-            <img class="h-64 m-8 p-2 bg-white rounded-lg" src={start_proto} alt="" />
-            <img class="h-96 m-8 p-2" src={champ} alt="" />
-            <img class="h-96 m-8 p-.5" src={randisoniker} alt="" />
+            <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
+                <img src={start_proto} alt="" />
+            </div>
+            <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
+                <img src={champ} alt="" />
+            </div>
+            <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 align-middle justify-center">
+                <img src={randisoniker} alt="" />
+            </div>
         </div>
     </div>
 	<div class="flex flex-wrap justify-center text-center m-20">

@@ -1,5 +1,6 @@
 <script lang="ts">
     export let data;
+    export let last;
     const formatDate = (unix_timestamp: number) => {
         const date = new Date(unix_timestamp * 1000);
         let hours = date.getHours();
@@ -16,14 +17,14 @@
 		<div class="ml-20 text-[#fcebda] text-6xl">
 			<div class="ml-3" id={data.title}>
 				{data.title}
-                {#if !!data.author}
-                    <div class="text-sm flex align-middle p-0.5">
-                        <img class="h-8 w-8 rounded-full" src={data.author.pfp} alt="" />
-                        <div class="align-middle ml-1 mt-1">
-                            {data.author.name}
-                        </div>
-                    </div>
-                {/if}
+                <!-- {#if !!data.author} -->
+                <!--     <div class="text-sm flex align-middle p-0.5"> -->
+                <!--         <img class="h-8 w-8 rounded-full" src={data.author.pfp} alt="" /> -->
+                <!--         <div class="align-middle ml-1 mt-1"> -->
+                <!--             {data.author.name} -->
+                <!--         </div> -->
+                <!--     </div> -->
+                <!-- {/if} -->
                 {#if !!data.created_date}
                     <div class="text-sm">
                         created: {formatDate(data.created_date)}
@@ -33,32 +34,40 @@
                     </div>
                 {/if}
 			</div>
-			<div class="flex dot-container">
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-			</div>
-			<div class="mt-12 ml-20 text-[#fcebda] text-5xl">
+            <div class="sep-line" />
+			<div class="mt-12 ml-2 text-[#fcebda] text-5xl">
 				{data.content}
 			</div>
+            {#if !last}
+                <div class="flex dot-container mt-24">
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                </div>
+            {/if}
 		</div>
 	</div>
 </section>
 
 <style>
+    .sep-line {
+        width: 40rem;
+        border-bottom: 1px solid #bc8f62;
+        margin-top: 1.1rem;
+    }
 	.dot-container {
 		width: 40rem;
 	}

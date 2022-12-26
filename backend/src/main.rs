@@ -36,7 +36,7 @@ async fn main() -> std::io::Result<()> {
     let tokens: Arc<DashMap<String, AccessToken>> = Arc::new(DashMap::new());
     // <title, post>
     let blog_post: Arc<DashMap<String, BlogPost>> = Arc::new(DashMap::new());
-    let blog_posts = blog_post.clone();
+    let post_loop = blog_post.clone();
     tokio::spawn(async move {
         let mut i = 0;
         let notion = loop {
@@ -57,6 +57,7 @@ async fn main() -> std::io::Result<()> {
                 )
                 .await
             {
+                let mut new_post = DashMap::new();
                 for p in v.results() {
                     let t = p.title();
                     let Some(title) = t else {
@@ -72,18 +73,22 @@ async fn main() -> std::io::Result<()> {
                     let Some(post) = BlogPost::from_property_map(p) else {
                         continue;
                     };
-                    *blog_posts.entry(post.title().to_owned()).or_insert(post) = post.clone();
+                    *new_post.entry(post.title().to_owned()).or_insert(post) = post.clone();
                 }
+                post_loop.clear();
+                // absolutely terrible solution, but good enough for small scale
+                (*post_loop).clone_into(&mut new_post);
             }
-            sleep(Duration::from_secs(60));
+            sleep(Duration::from_secs(120));
         }
     });
     let blog_post = blog_post.clone();
     HttpServer::new(move || {
-        let cors = Cors::default()
-            .allowed_origin("http://localhost:5173")
-            .allowed_origin("https://team9293.com")
-            .allow_any_method();
+        // let cors = Cors::default()
+        //     .allowed_origin("http://localhost:5173")
+        //     .allowed_origin("https://team9293.com")
+        //     .allow_any_method();
+        let cors = Cors::permissive();
         App::new()
             .wrap(cors)
             .app_data(AppData {

@@ -93,8 +93,9 @@
 		</div>
 	{/if}
 	<div>
-		{#each posts as p}
-			<Post data={p} />
+		{#each posts as p, i}
+            <!-- hide the dots line for the last post since it looks a bit odd -->
+			<Post data={p} last={i == posts.length - 1} />
 		{/each}
 	</div>
 	{#if !mobile}
