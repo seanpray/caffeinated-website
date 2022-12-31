@@ -1,6 +1,6 @@
 mod models;
 use actix_cors::Cors;
-use std::{str::FromStr, sync::Arc, thread::sleep, time::Duration};
+use std::{str::FromStr, sync::Arc, thread::sleep, time::Duration, collections::HashMap};
 
 use models::*;
 mod database;
@@ -57,7 +57,7 @@ async fn main() -> std::io::Result<()> {
                 )
                 .await
             {
-                let mut new_post = DashMap::new();
+                let mut new_post = HashMap::new();
                 for p in v.results() {
                     let t = p.title();
                     let Some(title) = t else {
@@ -66,9 +66,6 @@ async fn main() -> std::io::Result<()> {
                     if title.is_empty() {
                         continue;
                     }
-                    // for (k, v) in &p.properties.properties {
-                    //     println!("{:?} : {:?}", k, v);
-                    // }
                     let p = &p.properties.properties;
                     let Some(post) = BlogPost::from_property_map(p) else {
                         continue;
@@ -77,7 +74,10 @@ async fn main() -> std::io::Result<()> {
                 }
                 post_loop.clear();
                 // absolutely terrible solution, but good enough for small scale
-                (*post_loop).clone_into(&mut new_post);
+                //(*post_loop).clone_into(&mut new_post);
+                for (k, v) in &new_post {
+                    post_loop.insert(k.to_string(), v.clone());
+                }
             }
             sleep(Duration::from_secs(120));
         }
@@ -98,7 +98,7 @@ async fn main() -> std::io::Result<()> {
             .service(greet)
             .service(routes::posts::posts)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", 9293))?
     .run()
     .await
 }

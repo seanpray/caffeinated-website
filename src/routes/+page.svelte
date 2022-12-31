@@ -77,7 +77,7 @@
                 <img class="mobile-logo m-1" src={logo} alt="" />
             </div>
 		</div>
-		<div class="mobile-title -translate-y-44">
+		<div class="mobile-title">
 			<div class="mobile-name font-extrabold">caffeinated</div>
 			<br />
 			<div class="team-number text-4xl font-bold ml-1">FRC 9293</div>
@@ -259,6 +259,7 @@
 		width: 36rem;
 	}
 	.mobile-title {
+        transform: translateY(-10rem);
 		margin-top: 30rem;
 	}
 	.mobile-name {
@@ -297,7 +298,7 @@
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
-	@media (max-width: 1000px) {
+	@media (max-width: 890px) {
         .text-boxes {
             font-size: 1rem;
             line-height: 1.5rem;
@@ -316,16 +317,19 @@
             width: 90vw;
         }
 		.mobile-logo {
-			height: 90vw;
-			width: 90vw;
+			height: 60vw;
+			width: 60vw;
+            margin-left: 20vw;
 		}
 		.mobile-steam {
-			margin-left: 20vw;
+			margin-left: 40%;
             margin-top: 5vh;
 		}
 		.mobile-title {
 			margin-top: 0;
-			margin-left: 2.5rem;
+			margin-left: 10vw;
+            transform: translateY(-12rem);
+			font-size: 17vw;
 		}
 		.mobile-name {
 			font-size: 17vw;
@@ -344,7 +348,7 @@
             background: #ffe9d3;
             z-index: 2;
             border-radius: 50%;
-            margin: 8vw;
+            margin-top: 8vw;
         }
 	}
 	.dotcontainer {
