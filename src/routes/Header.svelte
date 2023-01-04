@@ -33,14 +33,14 @@
 
 <style>
 	.header-items {
-		-webkit-text-stroke-width: 0.2px;
-		-webkit-text-stroke-color: black;
+		//-webkit-text-stroke-width: 0.2px;
+		//-webkit-text-stroke-color: black;
         font-size: 3vw;
 	}
     @media (max-width: 800px) {
         .header-items {
-            -webkit-text-stroke-width: 0.2px;
-            -webkit-text-stroke-color: black;
+            //-webkit-text-stroke-width: 0.2px;
+            //-webkit-text-stroke-color: black;
             font-size: 1.3rem;
         }
     }

@@ -10,6 +10,60 @@
         }
         return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}, ${hours}:${date.getMinutes()} ${pm ? "pm" : "am"}`
     };
+    let content = [];
+    let links = [];
+    let current_content = "";
+    let current_link = "";
+    let image_open = false;
+    let first = false;
+    // WHY DOES NOTION INSERT AN EXTRA SPACE IN BETWEEN LINKS
+    let next = false;
+    let next2 = false;
+    let image_flag = false;
+    for (let i = 0; i < data.content.length; i++) {
+        const c = data.content[i];
+        if (c == "<") {
+            first = true;
+            image_open = true;
+        } else if (c == ">") {
+            if (image_flag) {
+                links.push(current_link);
+                current_link = "";
+                image_flag = false;
+                continue;
+            }
+            image_open = false;
+        }
+        if (!image_open && !image_flag) {
+            current_content += c;
+            continue;
+        }
+        // if it's not http/https, then we consider invalid
+        if (first && !image_flag) {
+            next = true;
+            first = false;
+            current_content += c;
+            continue;
+        } else if (next && c == " " && !image_flag) {
+            next = false;
+            next2 = true;
+            continue;
+        } else if (next2 && c == "h" && !image_flag) {
+            current_content = current_content.slice(0, -1);
+            image_flag = true;
+        } else if (!image_flag) {
+            current_content += c;
+            continue;
+        }
+        next2 = false;
+        if (current_content.length > 0) {
+            content.push(current_content);
+            current_content = "";
+        }
+        current_link += c;
+    }
+    content.push(current_content);
+    links.push(current_link);
 </script>
 
 <section class="mt-10 font-semibold">
@@ -35,8 +89,11 @@
                 {/if}
 			</div>
             <div class="sep-line" />
-			<div class="mt-12 ml-2 text-[#fcebda] text-5xl">
-				{data.content}
+			<div class="mt-12 ml-2 text-[#fcebda] text-5xl max-w-[53vw]">
+                {#each content as p, i}
+                    {p}
+                    <img class="max-w-[53vw]" src={links[i]} alt="" />
+                {/each}
 			</div>
             {#if !last}
                 <div class="flex dot-container mt-24">
@@ -80,7 +137,12 @@
 		border-radius: 50%;
 		margin: 0.7rem;
 	}
-	@media (max-width: 1500px) {
+	@media (max-width: 1100px) {
+        .sep-line {
+            width: 60vw;
+            border-bottom: 1px solid #bc8f62;
+            margin-top: 1.1rem;
+        }
 		.dot2 {
 			height: 1vw;
 			width: 1vw;

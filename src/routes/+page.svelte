@@ -85,135 +85,137 @@
 	</div>
 	<div class="mt-60" />
 	<!-- caffeinated9293@gmail.com -->
-	<div class="flex flex-wrap">
-		<div class="flex justify-center text-center">
-			<div>
-				<div class="mobile-name uppercase font-extrabold flex ml-1">
-					first
-					{#if !mobile}
-						<img class="ml-16 h-48 m-2 rounded-md" src={first_logo} alt="" />
-					{/if}
-				</div>
-				<div class="flex -translate-y-8">
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-					<div class="dot3" />
-				</div>
-				<div>
-					<div class="text-boxes m-2 max-w-4xl content-center font-bold text-left mt-8">
-						In 1989, Dean Kamen started the nonprofit organization FIRST, which stands for "For the
-						Inspiration and Recognition of Science and Technology". The FIRST Robotics Competition
-						is a high-school robotics competition that combines gracious professionalism with
-						technology to create an environment that encourages a better appreciation for STEM.
-						Professional mentors and college students collaborate with teams to educate students in
-						essential engineering concepts and professional skills while also assisting the team in
-						its success.
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="mx-[2%]">
+        <div class="flex flex-wrap justify-center">
+            <div class="flex justify-center text-center mr-4">
+                <div>
+                    <div class="mobile-name uppercase font-extrabold flex ml-1">
+                        first
+                        {#if !mobile}
+                            <img class="ml-16 h-48 m-2 rounded-md" src={first_logo} alt="" />
+                        {/if}
+                    </div>
+                    <div class="flex -translate-y-8">
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                        <div class="dot3" />
+                    </div>
+                    <div>
+                        <div class="text-boxes m-2 max-w-4xl content-center font-bold text-left mt-8">
+                            In 1989, Dean Kamen started the nonprofit organization FIRST, which stands for "For the
+                            Inspiration and Recognition of Science and Technology". The FIRST Robotics Competition
+                            is a high-school robotics competition that combines gracious professionalism with
+                            technology to create an environment that encourages a better appreciation for STEM.
+                            Professional mentors and college students collaborate with teams to educate students in
+                            essential engineering concepts and professional skills while also assisting the team in
+                            its success.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		<div class="flex justify-center text-center mt-4">
-			<div class="flex flex-wrap justify-center text-center content-center">
-				<div class="text-boxes m-2 max-w-4xl content-center font-bold text-right">
-					"FIRST creates programs where its participants are limited only by the bounds of their
-					imagination and gives them a forum to begin to examine the world’s problems by exploring
-					science, technology, engineering and math.
-					<br />
-					- Congressman Jim Langevin (RI)
-					{#if !mobile}
-						<iframe
-							class="ml-6 rounded-md float-right mt-10"
-							width="560"
-							height="315"
-							src="https://www.youtube.com/embed/oVhzG42vOoY"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					{:else}
-                        <div class="flex flex-center justify-center">
+            <div class="flex justify-center mt-4 text-right float-right ml-4">
+                <div class="flex flex-wrap justify-center text-right float-right">
+                    <div class="text-boxes m-2 max-w-4xl content-center font-bold text-right">
+                        "FIRST creates programs where its participants are limited only by the bounds of their
+                        imagination and gives them a forum to begin to examine the world’s problems by exploring
+                        science, technology, engineering and math.
+                        <br />
+                        - Congressman Jim Langevin (RI)
+                        {#if !mobile}
                             <iframe
                                 class="ml-6 rounded-md float-right mt-10"
-                                width="250"
-                                height="141"
+                                width="560"
+                                height="315"
                                 src="https://www.youtube.com/embed/oVhzG42vOoY"
                                 title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen
                             />
+                        {:else}
+                            <div class="flex flex-center justify-center">
+                                <iframe
+                                    class="ml-6 rounded-md float-right mt-10"
+                                    width="250"
+                                    height="141"
+                                    src="https://www.youtube.com/embed/Jd29kzjclV0"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                />
+                            </div>
+                        {/if}
+                        <br />
+                        <div class="flex first-dots-ending float-right">
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
+                            <div class="dot3" />
                         </div>
-					{/if}
-					<br />
-					<div class="flex first-dots-ending float-right">
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-						<div class="dot3" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="mt-80" />
-	<div class="flex flex-wrap">
-		<div class="flex justify-center text-center">
-			<div>
-				<div class="mobile-name font-extrabold flex ml-1">the team</div>
-				<div>
-					<div class="text-boxes m-2 max-w-[110rem] content-center font-bold text-left mt-8">
-						Caffeinated is a community-based FIRST Robotics Competition team in Marietta, GA. The
-						team was founded on November, 2022 with the mission of not only to be a competitive FRC
-						team, but also to provide a productive, engaging environment for high schoolers in the
-						area to develop advanced skills in engineering and project management. With experienced
-						mentors and coaches around to provide a guiding hand, we are able to organically learn
-						how to come to their own conclusions through their own research and analysis. This
-						allows us a deeper takeaway than simply being given the solution.
-					</div>
-				</div>
-				<div class="flex mt-8">
-                    {#if !mobile}
-                        <div class="bottom-0 left-4 translate-y-24">
-                            <div class="dot2" />
-                            <div class="dot2" />
-                            <div class="dot2" />
-                            <div class="dot2" />
-                        </div>
-                    {/if}
-                    <div class="flex flex-wrap max-w-full team-profile">
-                        <img class="mx-4 my-4 h-64" src={ian_oberbeck} alt="" />
-                        <img class="mx-4 my-4 h-64" src={jacob_dymkowski} alt="" />
-                        <img class="mx-4 my-4 h-64" src={leona_longhurst} alt="" />
-                        <img class="mx-4 my-4 h-64" src={sameeh_pottayil} alt="" />
-                        <img class="mx-4 my-4 h-64" src={sean_ray} alt="" />
                     </div>
-				</div>
-			</div>
-		</div>
-		{#if !mobile}
-			<div class="bottom-0 right-5">
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-				<div class="dot2" />
-			</div>
-		{/if}
-	</div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-80" />
+        <div class="flex flex-wrap">
+            <div class="flex justify-center text-center">
+                <div>
+                    <div class="mobile-name font-extrabold flex ml-1">the team</div>
+                    <div>
+                        <div class="text-boxes m-2 max-w-[80vw] content-center font-bold text-left mt-8">
+                            Caffeinated is a community-based FIRST Robotics Competition team in Marietta, GA. The
+                            team was founded on November, 2022 with the mission of not only to be a competitive FRC
+                            team, but also to provide a productive, engaging environment for high schoolers in the
+                            area to develop advanced skills in engineering and project management. With experienced
+                            mentors and coaches around to provide a guiding hand, we are able to organically learn
+                            how to come to their own conclusions through their own research and analysis. This
+                            allows us a deeper takeaway than simply being given the solution.
+                        </div>
+                    </div>
+                    <div class="flex mt-8">
+                        {#if !mobile}
+                            <div class="bottom-0 left-4 translate-y-24">
+                                <div class="dot2" />
+                                <div class="dot2" />
+                                <div class="dot2" />
+                                <div class="dot2" />
+                            </div>
+                        {/if}
+                        <div class="flex flex-wrap max-w-full team-profile">
+                            <img class="mx-4 my-4 h-64" src={ian_oberbeck} alt="" />
+                            <img class="mx-4 my-4 h-64" src={jacob_dymkowski} alt="" />
+                            <img class="mx-4 my-4 h-64" src={leona_longhurst} alt="" />
+                            <img class="mx-4 my-4 h-64" src={sameeh_pottayil} alt="" />
+                            <img class="mx-4 my-4 h-64" src={sean_ray} alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#if !mobile}
+                <div class="bottom-0 right-5">
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                    <div class="dot2" />
+                </div>
+            {/if}
+        </div>
+    </div>
 </section>
 
 <style>

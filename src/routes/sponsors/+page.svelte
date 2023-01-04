@@ -3,6 +3,8 @@
     import start_proto from '$lib/sponsors/startproto.svg';
     import champ from '$lib/sponsors/champ.png';
     import randisoniker from '$lib/sponsors/randisoniker.png';
+
+    import gra from '$lib/gra.jpg'
 </script>
 
 <svelte:head>
@@ -16,8 +18,8 @@
 			Many thanks to our sponsors for their generous support!
 		</div>
 	</div>
-	<div class="flex justify-center m-20">
-        <div class="flex flex-wrap justify-center m-20 mx-[15%]">
+	<div class="flex justify-center mt-5">
+        <div class="flex flex-wrap justify-center m-5 mx-[15%]">
             <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
                 <img src={start_proto} alt="" />
             </div>
@@ -28,6 +30,12 @@
                 <img src={randisoniker} alt="" />
             </div>
         </div>
+    </div>
+	<div class="flex flex-wrap text-xl justify-center text-center mt-5">
+        Caffeinated FRC 9293 is a member of the Georgia Robotics Alliance.
+    </div>
+	<div class="flex flex-wrap justify-center text-center">
+        <img class="max-w-2xl rounded-md" src={gra} alt="" />
     </div>
 	<div class="flex flex-wrap justify-center text-center m-20">
 		<div class="text-2xl font-extrabold flex ml-1">

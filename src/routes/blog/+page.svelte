@@ -10,13 +10,18 @@
 	ismobile.subscribe((d) => {
 		mobile = d;
 	});
+    const fetch_post = async () => {
+        let req = await fetch(import.meta.env.VITE_BACKEND_URL + "/posts");
+        if (req.ok) {
+            posts = await req.json();
+        }
+    }
 	onMount(async () => {
-    console.log(import.meta.env.VITE_BACKEND_URL)
-		let req = await fetch(import.meta.env.VITE_BACKEND_URL + "/posts");
-		if (req.ok) {
-			posts = await req.json();
-		}
-		console.log(posts);
+        await fetch_post();
+        // update every 2 minutes
+        setTimeout(async () => {
+            await fetch_post();
+        }, 120000);
 	});
 
 	const prefixZero = (num: number) => {
