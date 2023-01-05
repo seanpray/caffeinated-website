@@ -80,19 +80,18 @@
 		<div class="mobile-title">
 			<div class="mobile-name font-extrabold">caffeinated</div>
 			<br />
-			<div class="team-number text-4xl font-bold ml-1">FRC 9293</div>
+			<div class="team-number text-4xl font-bold ml-1 -translate-y-16">FRC 9293</div>
 		</div>
 	</div>
 	<div class="mt-60" />
-	<!-- caffeinated9293@gmail.com -->
-    <div class="mx-[2%]">
+    <div class="mx-[1%]">
         <div class="flex flex-wrap justify-center">
-            <div class="flex justify-center text-center mr-4">
+            <div class="flex justify-center text-center mr-2">
                 <div>
                     <div class="mobile-name uppercase font-extrabold flex ml-1">
                         first
                         {#if !mobile}
-                            <img class="ml-16 h-48 m-2 rounded-md" src={first_logo} alt="" />
+                            <img class="ml-16 h-36 m-2 rounded-md" src={first_logo} alt="" />
                         {/if}
                     </div>
                     <div class="flex -translate-y-8">
@@ -106,7 +105,7 @@
                         <div class="dot3" />
                     </div>
                     <div>
-                        <div class="text-boxes m-2 max-w-4xl content-center font-bold text-left mt-8">
+                        <div class="text-boxes m-2 max-w-[45vw] content-center font-bold text-left mt-8">
                             In 1989, Dean Kamen started the nonprofit organization FIRST, which stands for "For the
                             Inspiration and Recognition of Science and Technology". The FIRST Robotics Competition
                             is a high-school robotics competition that combines gracious professionalism with
@@ -119,9 +118,9 @@
                 </div>
             </div>
 
-            <div class="flex justify-center mt-4 text-right float-right ml-4">
+            <div class="flex justify-center mt-4 text-right float-right ml-2">
                 <div class="flex flex-wrap justify-center text-right float-right">
-                    <div class="text-boxes m-2 max-w-4xl content-center font-bold text-right">
+                    <div class="text-boxes m-2 max-w-[45vw] content-center font-bold text-right">
                         "FIRST creates programs where its participants are limited only by the bounds of their
                         imagination and gives them a forum to begin to examine the world’s problems by exploring
                         science, technology, engineering and math.
@@ -265,7 +264,7 @@
 		margin-top: 30rem;
 	}
 	.mobile-name {
-		font-size: 8rem;
+		font-size: 8vw;
 	}
 	.mobile-spacing {
 		margin-top: 10rem;
@@ -300,7 +299,7 @@
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
-	@media (max-width: 890px) {
+	@media (max-width: 1200px) {
         .text-boxes {
             font-size: 1rem;
             line-height: 1.5rem;
@@ -330,11 +329,11 @@
 		.mobile-title {
 			margin-top: 0;
 			margin-left: 10vw;
-            transform: translateY(-12rem);
+            transform: translateY(-28vw);
 			font-size: 17vw;
 		}
 		.mobile-name {
-			font-size: 17vw;
+			font-size: 15vw;
 		}
 		.mobile-spacing {
 			margin-top: 1rem;

@@ -68,7 +68,7 @@
 
 <section class="mt-10 font-semibold">
 	<div class="flex flex-wrap">
-		<div class="ml-20 text-[#fcebda] text-6xl">
+		<div class="ml-10 text-[#fcebda] text-4xl">
 			<div class="ml-3" id={data.title}>
 				{data.title}
                 <!-- {#if !!data.author} -->
@@ -89,7 +89,7 @@
                 {/if}
 			</div>
             <div class="sep-line" />
-			<div class="mt-12 ml-2 text-[#fcebda] text-5xl max-w-[53vw]">
+			<div class="mt-12 ml-2 text-[#fcebda] text-xl post-width">
                 {#each content as p, i}
                     {p}
                     <img class="max-w-[53vw]" src={links[i]} alt="" />
@@ -121,7 +121,7 @@
 
 <style>
     .sep-line {
-        width: 40rem;
+        width: 50vw;
         border-bottom: 1px solid #bc8f62;
         margin-top: 1.1rem;
     }
@@ -137,9 +137,15 @@
 		border-radius: 50%;
 		margin: 0.7rem;
 	}
+    .post-width {
+        max-width: 50vw;
+    }
 	@media (max-width: 1100px) {
+        .post-width {
+            max-width: 80vw;
+        }
         .sep-line {
-            width: 60vw;
+            width: 70vw;
             border-bottom: 1px solid #bc8f62;
             margin-top: 1.1rem;
         }

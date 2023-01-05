@@ -87,7 +87,7 @@
 {/if}
 <section class="flex mx-[5%] mt-20">
 	{#if !mobile}
-		<div class="bg-[#bc8f62] mt-40 text-white w-2/12 h-[70vh] text-5xl font-extrabold">
+		<div class="bg-[#bc8f62] mt-40 text-white w-2/12 h-[70vh] text-3xl font-extrabold">
 			<div class="flex justify-center text-center mt-10">
 				{#each posts as p}
 					{@html formatDate(p.created_date)}
@@ -105,9 +105,9 @@
 	</div>
 	{#if !mobile}
 		<div class="absolute right-20 bg-[#4c2700] w-2/12 text-[#bc8f62] h-[85vh]">
-			<div class="ml-10 mt-10">
-				<div class="text-6xl font-extrabold">blog posts</div>
-				<div class="text-3xl font-extrabold">
+			<div class="ml-5 mt-5">
+				<div class="text-3xl font-extrabold">blog posts</div>
+				<div class="text-xl font-extrabold">
 					{#each posts as p}
 						<a href={'#' + p.title}>
 							{p.title}
