@@ -80,7 +80,7 @@
 		<div class="mobile-title">
 			<div class="mobile-name text-4xl font-extrabold">caffeinated</div>
 			<br />
-			<div class="team-number text-xl font-bold ml-1">FRC 9293</div>
+			<div class="team-number text-xl font-bold ml-1 mt-1">FRC 9293</div>
 		</div>
 	</div>
 	<div class="mt-60" />
@@ -88,13 +88,13 @@
         <div class="flex flex-wrap justify-center">
             <div class="flex justify-center text-center mr-2">
                 <div>
-                    <div class="mobile-name uppercase font-extrabold flex ml-1">
+                    <div class="mobile-name uppercase font-extrabold flex ml-2">
                         first
                         {#if !mobile}
                             <img class="ml-16 h-36 m-2 rounded-md" src={first_logo} alt="" />
                         {/if}
                     </div>
-                    <div class="flex -translate-y-8">
+                    <div class="flex -translate-y-4">
                         <div class="dot3" />
                         <div class="dot3" />
                         <div class="dot3" />
