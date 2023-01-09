@@ -51,7 +51,7 @@
 				</div>
 			{/if}
 		</div>
-		<div>
+		<div class="logo-translate">
 			<div class="mobile-steam">
 				<div class="grid grid-cols-3 w-[13rem] -translate-y-16">
 					<div>
@@ -78,9 +78,9 @@
             </div>
 		</div>
 		<div class="mobile-title">
-			<div class="mobile-name font-extrabold">caffeinated</div>
+			<div class="mobile-name text-4xl font-extrabold">caffeinated</div>
 			<br />
-			<div class="team-number text-4xl font-bold ml-1 -translate-y-16">FRC 9293</div>
+			<div class="team-number text-xl font-bold ml-1 -translate-y-3">FRC 9293</div>
 		</div>
 	</div>
 	<div class="mt-60" />
@@ -131,7 +131,7 @@
                                 class="ml-6 rounded-md float-right mt-10"
                                 width="560"
                                 height="315"
-                                src="https://www.youtube.com/embed/oVhzG42vOoY"
+                                src="https://www.youtube.com/embed/Jd29kzjclV0"
                                 title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -192,11 +192,11 @@
                             </div>
                         {/if}
                         <div class="flex flex-wrap max-w-full team-profile">
-                            <img class="mx-4 my-4 h-64" src={ian_oberbeck} alt="" />
-                            <img class="mx-4 my-4 h-64" src={jacob_dymkowski} alt="" />
-                            <img class="mx-4 my-4 h-64" src={leona_longhurst} alt="" />
-                            <img class="mx-4 my-4 h-64" src={sameeh_pottayil} alt="" />
-                            <img class="mx-4 my-4 h-64" src={sean_ray} alt="" />
+                            <img class="mx-4 my-4 h-60 rounded-md" src={ian_oberbeck} alt="" />
+                            <img class="mx-4 my-4 h-60 rounded-md" src={jacob_dymkowski} alt="" />
+                            <img class="mx-4 my-4 h-60 rounded-md" src={leona_longhurst} alt="" />
+                            <img class="mx-4 my-4 h-60 rounded-md" src={sameeh_pottayil} alt="" />
+                            <img class="mx-4 my-4 h-60 rounded-md" src={sean_ray} alt="" />
                         </div>
                     </div>
                 </div>
@@ -256,11 +256,11 @@
 		height: 30vh;
 	}
 	.mobile-logo {
-		height: 36rem;
-		width: 36rem;
+		height: min(36rem, 60vh);
+		width: min(36rem, 60vh);
 	}
 	.mobile-title {
-        transform: translateY(-10rem);
+        transform: translateY(-22rem);
 		margin-top: 30rem;
 	}
 	.mobile-name {
@@ -270,7 +270,7 @@
 		margin-top: 10rem;
 	}
 	.mobile-steam {
-		margin-left: 10rem;
+		margin-left: min(10rem, 12vh);
 	}
     .first-dots-ending {
         width: 20rem;
@@ -280,35 +280,32 @@
 		animation-iteration-count: infinite;
 		animation-duration: 5s;
 		animation-timing-function: linear;
-		height: 1rem;
-		width: 1rem;
+		height: .8rem;
+		width: .8rem;
 		border: 1px solid #ffe9d3;
 		background: #ffe9d3;
 		z-index: 2;
 		border-radius: 50%;
-		margin: 1.7rem;
+		margin: 1.1rem;
 	}
     .steam-grid-translate1 {
-        margin-top: 5.5rem;
+        margin-top: 3.8rem;
     }
     .steam-grid-translate2 {
-        margin-top: 13.6rem;
+        margin-top: 9.5rem;
     }
     .team-profile {}
     .text-boxes {
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
+    .logo-translate {
+        transform: translateY(-10vh);
+    }
 	@media (max-width: 1200px) {
         .text-boxes {
             font-size: 1rem;
             line-height: 1.5rem;
-        }
-        .steam-grid-translate1 {
-            margin-top: 20.1vw;
-        }
-        .steam-grid-translate2 {
-            margin-top: 50.1vw;
         }
         .team-profile {
             display: flex;
@@ -318,39 +315,31 @@
             width: 90vw;
         }
 		.mobile-logo {
-			height: 60vw;
-			width: 60vw;
-            margin-left: 20vw;
+			height: 90vw;
+			width: 90vw;
+            max-width: 500px;
+            max-height: 500px;
+            margin-top: 1rem;
+            margin-left: 10vw;
 		}
 		.mobile-steam {
-			margin-left: 40%;
+			margin-left: 20vw;
             margin-top: 5vh;
 		}
+        .logo-translate {
+            transform: translateY(2vh);
+        }
 		.mobile-title {
-			margin-top: 0;
+			margin-top: 2rem;
 			margin-left: 10vw;
-            transform: translateY(-28vw);
-			font-size: 17vw;
+            transform: translateY(max(-25vw, -25vh));
 		}
 		.mobile-name {
-			font-size: 15vw;
+			font-size: 8vw;
 		}
 		.mobile-spacing {
 			margin-top: 1rem;
 		}
-        .dot {
-            animation-name: wave;
-            animation-iteration-count: infinite;
-            animation-duration: 5s;
-            animation-timing-function: linear;
-            height: 2vw;
-            width: 2vw;
-            border: 1px solid #ffe9d3;
-            background: #ffe9d3;
-            z-index: 2;
-            border-radius: 50%;
-            margin-top: 8vw;
-        }
 	}
 	.dotcontainer {
 		align-items: bottom;
