@@ -80,7 +80,7 @@
 		<div class="mobile-title">
 			<div class="mobile-name text-4xl font-extrabold">caffeinated</div>
 			<br />
-			<div class="team-number text-xl font-bold ml-1 -translate-y-3">FRC 9293</div>
+			<div class="team-number text-xl font-bold ml-1">FRC 9293</div>
 		</div>
 	</div>
 	<div class="mt-60" />
@@ -330,9 +330,9 @@
             transform: translateY(2vh);
         }
 		.mobile-title {
-			margin-top: 2rem;
+			margin-top: 1rem;
 			margin-left: 10vw;
-            transform: translateY(max(-25vw, -25vh));
+            transform: translateY(max(-25vw, -20vh));
 		}
 		.mobile-name {
 			font-size: 8vw;
