@@ -2,7 +2,7 @@
 	import rapid_react from '$lib/images/rapidreact.png';
     import start_proto from '$lib/sponsors/startproto.svg';
     import champ from '$lib/sponsors/champ.png';
-    import randisoniker from '$lib/sponsors/randisoniker.png';
+    import siroco from '$lib/sponsors/siroco.png';
 
     import gra from '$lib/gra.jpg'
 </script>
@@ -26,9 +26,9 @@
             <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
                 <img src={champ} alt="" />
             </div>
-            <!-- <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 align-middle justify-center"> -->
-            <!--     <img src={randisoniker} alt="" /> -->
-            <!-- </div> -->
+            <div class="flex w-2/6 min-w-[22rem] h-auto m-8 p-1 align-middle justify-center">
+                <img src={siroco} alt="" />
+            </div>
         </div>
     </div>
 	<div class="flex flex-wrap text-xl justify-center text-center mt-5">
