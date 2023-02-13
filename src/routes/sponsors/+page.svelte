@@ -3,6 +3,8 @@
     import start_proto from '$lib/sponsors/startproto.svg';
     import champ from '$lib/sponsors/champ.png';
     import siroco from '$lib/sponsors/siroco.png';
+    import homedepot from '$lib/sponsors/homedepot.webp';
+    import lowes from '$lib/sponsors/lowes.jpg';
 
     import gra from '$lib/gra.jpg'
 </script>
@@ -26,8 +28,14 @@
             <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
                 <img src={champ} alt="" />
             </div>
-            <div class="flex w-2/6 min-w-[22rem] h-auto m-8 p-1 align-middle justify-center">
+            <div class="flex w-3/6 min-w-[22rem] h-auto m-8 p-1 align-middle justify-center">
                 <img src={siroco} alt="" />
+            </div>
+            <div class="flex w-1/6 min-w-[8rem] h-auto m-8 align-middle justify-center">
+                <img class="rounded-sm" src={lowes} alt="" />
+            </div>
+            <div class="flex w-1/6 min-w-[8rem] h-auto m-8 align-middle justify-center">
+                <img class="rounded-sm" src={homedepot} alt="" />
             </div>
         </div>
     </div>
