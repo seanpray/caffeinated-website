@@ -35,7 +35,7 @@
 	.header-items {
 		//-webkit-text-stroke-width: 0.2px;
 		//-webkit-text-stroke-color: black;
-        font-size: 3vw;
+        font-size: 2.5vw;
 	}
     @media (max-width: 800px) {
         .header-items {

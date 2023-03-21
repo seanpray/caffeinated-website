@@ -53,7 +53,7 @@
 		</div>
 		<div class="logo-translate">
 			<div class="mobile-steam">
-				<div class="grid grid-cols-3 w-[13rem] -translate-y-16">
+				<div class="grid grid-cols-3 w-[10rem] -translate-y-16">
 					<div>
 						<div class="dot" />
 						<div class="dot delay1" />
@@ -256,8 +256,8 @@
 		height: 30vh;
 	}
 	.mobile-logo {
-		height: min(36rem, 60vh);
-		width: min(36rem, 60vh);
+		height: min(30rem, 60vh);
+		width: min(30rem, 60vh);
 	}
 	.mobile-title {
 		transform: translateY(-22rem);
@@ -280,13 +280,14 @@
 		animation-iteration-count: infinite;
 		animation-duration: 5s;
 		animation-timing-function: linear;
-		height: 0.8rem;
-		width: 0.8rem;
+		height: 0.6rem;
+		width: 0.6rem;
 		border: 1px solid #ffe9d3;
 		background: #ffe9d3;
 		z-index: 2;
 		border-radius: 50%;
-		margin: 1.1rem;
+		margin: 0.5rem;
+        margin-top: 1.3rem;
 	}
 	.steam-grid-translate1 {
 		margin-top: 3.8rem;
@@ -316,8 +317,8 @@
 			width: 90vw;
 		}
 		.mobile-logo {
-			height: 90vw;
-			width: 90vw;
+			height: 80vw;
+			width: 80vw;
 			max-width: 500px;
 			max-height: 500px;
 			margin-top: 1rem;
@@ -348,8 +349,8 @@
 		bottom: 0;
 	}
 	.dot2 {
-		height: 1rem;
-		width: 1rem;
+		height: 0.8rem;
+		width: 0.8rem;
 		border: 1px solid #bc8f62;
 		background: #bc8f62;
 		z-index: 2;
@@ -357,13 +358,13 @@
 		margin: 1.7rem;
 	}
 	.dot3 {
-		height: 1rem;
-		width: 1rem;
+		height: 0.7rem;
+		width: 0.7rem;
 		border: 1px solid #bc8f62;
 		background: #bc8f62;
 		z-index: 2;
 		border-radius: 50%;
-		margin: 0.6rem;
+		margin: 0.5rem;
 	}
 	.delay1 {
 		animation-delay: 0.5s;

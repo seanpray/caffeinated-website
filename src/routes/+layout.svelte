@@ -35,12 +35,10 @@
             try {
 
             } catch {
-                console.log("parse fail")
                 clear_login();
             }
 		} else {
-			console.log('not auth');
-            console.log('auth');
+            // not auth
 		}
 		// get logged in
 	});
