@@ -1,8 +1,10 @@
 <script lang="ts">
 	import rapid_react from '$lib/images/rapidreact.png';
-    import start_proto from '$lib/sponsors/startproto.svg';
     import champ from '$lib/sponsors/champ.png';
+    import gradienttech from '$lib/sponsors/gradienttech.png';
     import siroco from '$lib/sponsors/siroco.png';
+    import birenpatel from '$lib/sponsors/birenpe_logo.png';
+    import start_proto from '$lib/sponsors/startproto.svg';
     import homedepot from '$lib/sponsors/homedepot.webp';
     import lowes from '$lib/sponsors/lowes.jpg';
 
@@ -22,19 +24,25 @@
 	</div>
 	<div class="flex justify-center">
         <div class="flex flex-wrap justify-center mx-[15%]">
-            <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
-                <img src={start_proto} alt="" />
-            </div>
-            <div class="flex w-2/6 min-w-[18rem] h-auto m-8 p-3 bg-white rounded-lg align-middle justify-center">
+            <div class="flex w-4/6 min-w-[10rem] h-auto m-5 p-3 bg-white rounded-lg align-middle justify-center">
                 <img src={champ} alt="" />
             </div>
-            <div class="flex w-3/6 min-w-[22rem] h-auto m-8 p-1 align-middle justify-center">
+            <div class="flex w-4/6 min-w-[1rem] h-auto m-5 align-middle justify-center">
                 <img src={siroco} alt="" />
             </div>
-            <div class="flex w-1/6 min-w-[8rem] h-auto m-8 align-middle justify-center">
+            <div class="flex w-1/6 min-w-[10rem] h-auto m-5 p-3 bg-white rounded-lg align-middle justify-center">
+                <img src={birenpatel} alt="" />
+            </div>
+            <div class="flex w-2/6 min-w-[10rem] h-auto m-5 p-3 rounded-lg align-middle justify-center">
+                <img src={gradienttech} alt="" />
+            </div>
+            <div class="flex w-3/6 min-w-[10rem] h-auto m-5 p-3 bg-white rounded-lg align-middle justify-center">
+                <img src={start_proto} alt="" />
+            </div>
+            <div class="flex w-1/6 min-w-[7rem] h-auto m-5 align-middle justify-center">
                 <img class="rounded-sm" src={lowes} alt="" />
             </div>
-            <div class="flex w-1/6 min-w-[8rem] h-auto m-8 align-middle justify-center">
+            <div class="flex w-1/6 min-w-[7rem] h-auto m-5 align-middle justify-center">
                 <img class="rounded-sm" src={homedepot} alt="" />
             </div>
         </div>

@@ -41,7 +41,7 @@
         .header-items {
             //-webkit-text-stroke-width: 0.2px;
             //-webkit-text-stroke-color: black;
-            font-size: 1rem;
+            font-size: 0.7rem;
         }
     }
 </style>
